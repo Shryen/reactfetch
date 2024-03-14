@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: rgb(44, 42, 42);
+  font-size: 16pt;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+  margin-inline: 0.5rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 5rem;
+  gap: 1rem;
+  max-width: 70%;
 }
 
-.App-link {
-  color: #61dafb;
+li{
+  list-style: none;
+  border-bottom: 1px solid black;
+  padding-block: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li:last-child{
+  border-bottom: none;
+}
+
+h2{
+  font-size: 20pt;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 40px;
+  aspect-ratio: 1;
+   --c: linear-gradient(#000 0 0);
+   --m: radial-gradient(farthest-side,#000 92%,#0000);
+  background: 
+    var(--c),var(--m),
+    var(--c),var(--m), 
+    var(--c),var(--m);
+  background-size: 8px 15px,8px 8px;
+  background-repeat: no-repeat;
+  animation: l14 1s infinite alternate;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+@keyframes l14 {
+  0%,
+  10% {background-position: 0 0   ,0 100%,50% 0   ,50% 100%,100% 0   ,100% 100%}
+  33% {background-position: 0 100%,0 0   ,50% 0   ,50% 100%,100% 0   ,100% 100%}
+  66% {background-position: 0 100%,0 0   ,50% 100%,50% 0   ,100% 0   ,100% 100%}
+  90%,
+  100%{background-position: 0 100%,0 0   ,50% 100%,50% 0   ,100% 100%,100% 0   }
 }
