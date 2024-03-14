@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Reddit from "./Reddit";
 import Joke from "./Joke";
+
 function App() {
   const [reddit, setReddit] = useState(false);
   const [joke, setJoke] = useState(false);
